@@ -4,7 +4,18 @@ import React from 'react'
 
 export const useTasks = () => {
     const [tasks, setTasks] = useState([]);
-    return (
-        {tasks}
-    )
+    const addTask = (title, content) => {
+        const newTask = {
+            id: crypto.randomUUID(),
+            title: title,
+            content: content,
+            date: Date.now()
+        };
+        setTasks([...tasks, newTask]);
+    };
+
+    return {
+        tasks,
+        addTask
+    };
 }
