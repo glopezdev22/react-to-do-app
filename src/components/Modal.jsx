@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import '@/styles/components/Modal.css'
 
 function Modal({ addTask }) {
 
@@ -30,17 +31,17 @@ function Modal({ addTask }) {
     };
 
     return (
-        <div>
-            <button onClick={() => setIsOpen(true)}>Crear Tarea</button>
+        <div className='modal-container'>
+            <button className='modal-create-button' onClick={() => setIsOpen(true)}>Crear Tarea</button>
             {
                 isOpen && (
             <div>
-                <input name='title' placeholder="Tarea" type="text" value={task.title} onChange={handleChange}/>
-                <input name='content' placeholder='Descripcion' type="text" value={task.content} onChange={handleChange}/>
-                <button onClick={() => handleSubmit()}>
+                <input className='modal-input' name='title' placeholder="Tarea" type="text" value={task.title} onChange={handleChange}/>
+                <input className='modal-input' placeholder='Descripcion' type="text" value={task.content} onChange={handleChange}/>
+                <button className='modal-submit-button' onClick={() => handleSubmit()}>
                     Crear
                 </button>
-                <button onClick={() => setIsOpen(false)}>Cerrar modal</button>
+                <button className='modal-close-button' onClick={() => setIsOpen(false)}>Cerrar modal</button>
             </div>
                 )
             }

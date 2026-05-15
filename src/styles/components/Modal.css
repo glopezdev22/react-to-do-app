@@ -1,0 +1,8 @@
+.modal-create-button{
+    padding: 12px;
+    background-color: #367e6e;
+    border-radius: 15px;
+}
+.modal-create-button:hover{
+    background-color: #165f60;
+}
