@@ -4,12 +4,12 @@ import React from 'react'
 
 export const useTasks = () => {
     const [tasks, setTasks] = useState([]);
-    const addTask = (title, content) => {
+    const addTask = (task) => {
         const newTask = {
             id: crypto.randomUUID(),
-            title: title,
-            content: content,
-            date: Date.now()
+            title: task.title,
+            content: task.content,
+            date: new Date().toLocaleDateString('es-CR'),
         };
         setTasks([...tasks, newTask]);
     };
