@@ -2,13 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import '@/styles/components/Modal.css'
 
-function Modal({ addTask }) {
+function Modal({ addTask, isOpen, setIsOpen }) {
 
     const [task, setTask] = useState({
         title: "",
         content: ""
     });
-    const [isOpen, setIsOpen] = useState(false);
     const handleChange = (e) => {
         const {name, value} = e.target;
         setTask({
@@ -32,7 +31,6 @@ function Modal({ addTask }) {
 
     return (
         <div className='modal-container'>
-            <button className='modal-create-button' onClick={() => setIsOpen(true)}>Crear Tarea</button>
             {
                 isOpen && (
             <div>
