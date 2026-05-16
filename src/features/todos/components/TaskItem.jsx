@@ -1,5 +1,4 @@
 import React from 'react'
-import '@/styles/components/TaskItem.css'
 
 export default function TaskItem({ title, content, date}) {
   return (

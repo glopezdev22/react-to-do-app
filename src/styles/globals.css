@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme{
+    --color-btn-primary: #6366f1;
+    --color-btn-primary-hover: #5456ca;
+}
+
+body {
+    @apply bg-[#1e293b] text-white;
+}
