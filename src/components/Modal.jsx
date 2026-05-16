@@ -45,6 +45,7 @@ function Modal({ addTask, isOpen, setIsOpen }) {
 
                             <input
                                 className='w-full bg-slate-800 border border-slate-600 rounded-lg p-2 text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500'
+                                name='content'
                                 placeholder='Descripción'
                                 type="text"
                                 value={task.content}
